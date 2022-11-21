@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+  </head>
+  <body>
+    <h1>Home Page</h1>
+
+    
+    <h2>Student data</h2>
+    <table border="1px solid ">
+        <th>Id</th>
+        <th>Name</th>
+        <th>empno</th>
+        <th>City</th>
+        <th>salary</th>
+        <th>join_data</th>
+      </tr>
+      {% for teacher in teachers %}
+
+      <tr>
+        <td>{{teacher.id}}</td>
+        <td>{{teacher.name}}</td>
+        <td>{{teacher.empno}}</td>
+        <td>{{teacher.city}}</td>
+        <td>{{teacher.salary}}</td>
+        <td>{{teacher.join_date}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <!-- JavaScript Bundle with Popper -->
+  </body>
+</html>

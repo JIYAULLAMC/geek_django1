@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>this is register page</h1>
+    <!-- 
+
+        <form action="">
+            <div>
+                <h1>default_reg_form</h1>                
+                {{default_reg_form}}
+                <hr />
+      </div>
+      <h1>  
+          #curstmizing the form field accorging to the rquirement
+        </h1>
+      <div>
+          <h1>string_reg_form</h1>
+          {{string_reg_form}}
+          <hr />
+      </div>      
+      <div>
+          <h1>true_reg_form</h1>
+          {{true_reg_form}}
+          <hr />
+        </div>
+        <div>
+            <h1>false_reg_form</h1>
+            
+            {{false_reg_form}}
+            <hr />
+        </div>
+    </form>
+    <form action="">
+        <div>
+    <h1>reg_form</h1>
+    <table>
+        {{reg_form}}       
+    </table>
+    <hr />
+</div>
+<h1> field attributes related form fields  </h1>
+
+<form action="">
+<div>
+    {{reg_form}}   
+</div>
+<div>
+{{reg_form.name.label}}    # to get the label  <br/>
+{{reg_form.name}}   # to get the content  <br/>
+</div>
+<div>
+    {{reg_form.name.id_for_label}}    # to get the for iflabel  <br/>
+    {{reg_form.name}}   # to get the content  <br/>
+</div>
+<div>
+{{reg_form.name.label_tag}}    # to get the for label  <br/>
+{{reg_form.name}}   # to get the content  <br/>
+{{reg_form.name.name}}    # to get the for name of tag  <br/>
+{{reg_form.name.html_name}}    # to get the for name of tag  <br/>
+{{reg_form.name.value}}    # to get the for value of tag  <br/>
+{{reg_form.name.help_text}}    # to get the for value of tag  <br/>
+{{reg_form.name.field.required}}    # to get the for value of tag  <br/>---------
+{{reg_form.name.html_id}}    # to get the for id of tag  <br/>
+</div>
+
+-->
+<h1> Looping the form fields </h1>
+
+<div>
+
+    {{reg_form.as_p}}
+</div>
+<div>
+    <h2>looping</h2>
+
+    {% for field in reg_form %}
+    {{field.label}}-----
+    {{field.label_tag}}
+    {{field}}
+    {{field.name}}
+    {{field.value}}
+    {{field.initial}}
+
+    {% endfor%}
+</div>
+
+</body>
+</html>

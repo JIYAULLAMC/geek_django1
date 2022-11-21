@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Home page</h1>
+
+    {% if stus %}
+    <h2>show data</h2>
+
+    <table border="1px solid ">
+      <tr>
+        <th>Id</th>
+        <th>Stuid</th>
+        <th>Stuname</th>
+        <th>Stuemail</th>
+        <th>Stupass</th>
+      </tr>
+
+      {% for stu in stus %}
+
+      <tr>
+        <td>{{stu.id}}</td>
+        <td>{{stu.stuid}}</td>
+        <td>{{stu.stuname}}</td>
+        <td>{{stu.stuemail}}</td>
+        <td>{{stu.stupass}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    {% else %}
+
+    <h2>no data</h2>
+    {%endif%}
+  </body>
+</html>

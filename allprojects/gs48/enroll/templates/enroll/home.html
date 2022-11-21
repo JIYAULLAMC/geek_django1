@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>this is home page</h1>
+    <h2>{{status}}</h2>
+    <a href="{% url 'detail' 1 %}">Student 1 </a> <br />
+    <a href="{% url 'detail' 2 %}">Student 2 </a> <br />
+    <a href="{% url 'detail' 3 %}">Student 3 </a> <br />
+    <a href="{% url 'detail' 4 %}">Student 4 </a> <br />
+
+    <h2>sub pages</h2>
+    <a href="{% url 'sub_detail' 1 5 %}">Student 1 sub_id 5</a> <br />
+    <a href="{% url 'sub_detail' 2 6 %}">Student 2 sub_id 6</a> <br />
+    <a href="{% url 'sub_detail' 3 7 %}">Student 3 sub_id 7</a> <br />
+    <a href="{% url 'sub_detail' 4 8 %}">Student 4 sub_id 8</a> <br />
+  </body>
+</html>

@@ -1,0 +1,49 @@
+from django.db import models
+
+# Create your models here.
+
+
+# abstract class 
+
+
+# class CommonInfo(models.Model):
+#     name = models.CharField(max_length=70)
+#     age = models.IntegerField()
+#     date = models.DateField()
+
+#     class Meta:
+#         abstract = True
+
+
+# class Student(CommonInfo):
+#     date = None
+#     fees = models.IntegerField()
+
+
+# class Teacher(CommonInfo):
+#     salary = models.IntegerField()
+
+
+# class Constructor(CommonInfo):
+#     date = models.DateTimeField()
+#     payment =  models.IntegerField()
+
+
+
+
+# Multip class table or model inheritence
+
+
+
+#-------------------------------------------------------
+
+
+class ExamCenter(models.Model):
+    cname = models.CharField(max_length= 70)
+    city = models.CharField(max_length= 70)
+
+
+
+class Student(ExamCenter):
+    name = models.CharField(max_length= 70)
+    roll = models.IntegerField()
